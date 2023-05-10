@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from "react";
+import ReactDOM from "react-dom/client";
+function Welcome(props){
+  return <h1>Hello, {props.name}</h1>
 }
-
-export default App;
+function App(){
+  return (
+    <div>
+    <Welcome name = "webs" />
+    <Welcome />
+    <Welcome />
+    </div>
+  )
+}
+const element = <Hello name = "kimdohyun" />
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(element);
